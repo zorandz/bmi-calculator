@@ -14,7 +14,7 @@ document.querySelector("#metric").addEventListener('click', (event) => {
     switchUnits(metric);
 
     document.getElementById("welcome").classList.remove("gone");
-    document.getElementById("enter-wh").classList.remove("gone");
+    document.getElementById("enter-wh-parag").classList.remove("gone");
     document.getElementById("result-2").classList.add("gone");
 })
 
@@ -28,12 +28,13 @@ document.querySelector("#imperial").addEventListener('click', (event) => {
     switchUnits(metric);
 
     document.getElementById("welcome").classList.remove("gone");
-    document.getElementById("enter-wh").classList.remove("gone");
+    document.getElementById("enter-wh-parag").classList.remove("gone");
     document.getElementById("result-2").classList.add("gone");
 })
 
 
 function switchUnits(metric) {
+    document.getElementById("result-3").classList.add("gone");
     if (metric) {
         document.getElementById("cm-or-inch").innerHTML = "cm"
         document.getElementById("kg-or-pound").innerHTML = "kg"
@@ -71,12 +72,12 @@ function calculate() {
 
     if (heightVar == "" || weightVar == "") {
         document.getElementById("welcome").classList.add("gone");
-        document.getElementById("enter-wh").classList.add("gone");
+        document.getElementById("enter-wh-parag").classList.add("gone");
         document.getElementById("result-3").classList.remove("gone")
 
         setTimeout(() => {
             document.getElementById("welcome").classList.remove("gone");
-            document.getElementById("enter-wh").classList.remove("gone");
+            document.getElementById("enter-wh-parag").classList.remove("gone");
             document.getElementById("result-3").classList.add("gone");
         }, 3000)
         return;
@@ -94,7 +95,7 @@ function calculate() {
     }
 
     document.getElementById("welcome").classList.add("gone");
-    document.getElementById("enter-wh").classList.add("gone");
+    document.getElementById("enter-wh-parag").classList.add("gone");
     document.getElementById("result-2").classList.remove("gone");
 
     document.getElementById("calculated-num").innerHTML = calculatedBMI;
