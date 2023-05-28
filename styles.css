@@ -43,7 +43,7 @@ h3 {
     top: 0;
     left: 0;
     width: 77vw;
-    height: 65vh;
+    height: 77vh;
     z-index: -1;
     background-image: linear-gradient(to bottom right, white, #e7f5fe, #d7e7fe);
 }
@@ -385,8 +385,15 @@ input[type="radio"] {
 
 .curved-line-right {
     position: absolute;
-    left: 25rem;
+    left: 30rem;
     top: 122rem;
+}
+
+@-moz-document url-prefix(){ 
+    .curved-line-right {
+        top: 115rem;
+    }
+
 }
 
 .section-1 div {
@@ -395,12 +402,11 @@ input[type="radio"] {
 
 .section-2 {
     display: block;
-    width: 100%;
+    width: 90%;
     background-image: linear-gradient(to left, #f6fbff, white);
     margin: 8rem 0;
     padding: 3rem;
     border-radius: 20px;
-    margin-left: 5rem;
   }
   
 .tile-1, .tile-2, .tile-3 {
@@ -491,7 +497,7 @@ input[type="radio"] {
 .box-3 {
     grid-area: 3 / 4 / 3 / 6;
     min-width: 250px;
-    margin-left: 20px;
+    max-height: 140px;
 }
 
 .box-4 {
@@ -1096,7 +1102,7 @@ input[type="radio"] {
 
 @media only screen and (max-width: 430px) {
     .title-box-container {
-        margin-left: -21vw;
+        margin-left: 4vw;
     }
 
     .main-inputs-container div input {
@@ -1133,6 +1139,12 @@ input[type="radio"] {
 
 @media only screen and (max-width: 380px) {
     .title-box-container {
-        margin-left: -27vw;
+    }
+}
+
+@media only screen and (max-width: 1385px) {
+    .curved-line-right {
+        top: 121rem;
+        left: 25rem;
     }
 }
