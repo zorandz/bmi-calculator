@@ -498,6 +498,7 @@ input[type="radio"] {
     grid-area: 3 / 4 / 3 / 6;
     min-width: 250px;
     max-height: 140px;
+    margin-left: 17px;
 }
 
 .box-4 {
